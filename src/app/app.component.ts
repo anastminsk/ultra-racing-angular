@@ -17,7 +17,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  //title = 'My First Angular App!';
   title = 'Ultra Racing';
   carParts = [{
     "id": 1,
@@ -41,11 +40,15 @@ export class AppComponent {
     "price": 24.99
   }];
 
-  totalCarParts() {
+  /*totalCarParts() {
     let sum = 0;
     for (let carPart of this.carParts) {
       sum += carPart.inStock;
     }
     return sum;
+  }*/
+
+  totalCarParts() {
+    return this.carParts.reduce((prev, current) => prev + current.inStock, 0);
   }
 }
