@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `<h1>{{title}}</h1>
+    <p>There are {{totalCarParts()}} total parts in stock.</p>
     <ul>
       <li *ngFor="let carPart of carParts">
         <h2>{{carPart.name | uppercase}}</h2>
@@ -39,4 +40,12 @@ export class AppComponent {
     "inStock": 0,
     "price": 24.99
   }];
+
+  totalCarParts() {
+    let sum = 0;
+    for (let carPart of this.carParts) {
+      sum += carPart.inStock;
+    }
+    return sum;
+  }
 }
