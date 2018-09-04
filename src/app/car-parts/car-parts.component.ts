@@ -18,4 +18,16 @@ export class CarPartsComponent {
   totalCarParts() {
     return this.carParts.reduce((prev, current) => prev + current.inStock, 0);
   }
+
+  upQuantity(carPart) {
+    if (carPart.quantity < carPart.inStock) {
+      carPart.quantity++;
+    }
+  }
+
+  downQuantity(carPart) {
+    if (carPart.quantity !== 0) {
+      carPart.quantity--;
+    }
+  }
 }
