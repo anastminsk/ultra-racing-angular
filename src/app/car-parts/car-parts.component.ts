@@ -33,4 +33,8 @@ export class CarPartsComponent {
       carPart.quantity--;
     }
   }
+
+  changeFeatured(carPart) {
+    carPart.featured = !carPart.featured;
+  }
 }

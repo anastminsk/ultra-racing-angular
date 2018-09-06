@@ -2,7 +2,7 @@
 <ul>
   <li class="card" *ngFor="let carPart of carParts" [class.featured]="carPart.featured">
     <div class="panel-body">
-      <div class="photo">
+      <div class="photo" (click)="changeFeatured(carPart)">
         <img [src]="carPart.image">
       </div>
       <table class="product-info">
@@ -13,7 +13,7 @@
             <p *ngIf="carPart.inStock > 0">{{carPart.inStock}} in Stock</p>
             <p *ngIf="carPart.inStock === 0">Out of Stock</p>
           </td>
-          <td class="price">{{carPart.price | currency:'EUR':true}}</td>
+          <td class="price">{{carPart.price | currency:'EUR'}}</td>
           <td>
             <div class="select-quantity">
               <button class="decrease" (click)="downQuantity(carPart)">-</button>
