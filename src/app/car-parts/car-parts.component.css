@@ -36,3 +36,8 @@
 .select-quantity {
   margin-left: 20px;
 }
+
+input.number {
+  width: 20px;
+  text-align: center;
+}
