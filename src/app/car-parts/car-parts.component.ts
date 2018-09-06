@@ -12,9 +12,10 @@ import { RacingDataService } from './racing-data.service';
 export class CarPartsComponent {
   carParts: CarPart[];
 
+  constructor(private racingDataService: RacingDataService) { }
+
   ngOnInit() {
-    let racingDataService = new RacingDataService();
-    this.carParts = racingDataService.getCarParts();
+    this.carParts = this.racingDataService.getCarParts();
   }
 
   totalCarParts() {
