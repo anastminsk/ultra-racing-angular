@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { CarPart } from './car-part';
-import { CARPARTS } from './mocks';
 import { RacingDataService } from './racing-data.service';
 
 @Component({

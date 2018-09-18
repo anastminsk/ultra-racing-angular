@@ -4,11 +4,11 @@ import { FormsModule } from '@angular/forms';
 import { CarPartsComponent } from './car-parts.component';
 
 @NgModule({
+  declarations: [CarPartsComponent],
   imports: [
     CommonModule,
     FormsModule
   ],
-  declarations: [CarPartsComponent],
   providers: [],
   exports: [CarPartsComponent]
 })
